@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="es-AR">
+<head>
+   <meta charset="UTF-8">
+    <title>Club del Trueque App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        
+       h1 {
+    font-size: 3em;
+    margin-bottom: 0.1em;
+    text-transform: uppercase; /* Makes text uppercase */
+    font-weight: 700; /* Makes the font weight bolder */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
+    color: white; /* Keeps the text color white */
+}
+
+
+     
+       
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center; /* Centra los elementos inline-block */
+        }
+        .hero-section,
+        .feature-section,
+        .cta-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .feature {
+            display: inline-block;
+            width: calc(100% / 3 - 20px); /* Ancho dividido entre 3 y margen */
+            margin: 10px;
+            vertical-align: top; /* Alinea los elementos verticalmente */
+        }
+        .feature img {
+            max-width: 100%; /* Asegura que las imágenes no sean más grandes que su contenedor */
+            height: auto; /* Mantiene la relación de aspecto */
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+  
+  
+ 
+
+  <header>
+    <div class="container">
+         <h1><span id="title-text">Club del Trueque</span></h1>
+                 <h3>¿Tenés cosas que no necesitás y necesitás cosas que no tenés? </h3>
+                 <h3>¿Tenés servicios que podés ofrecer y necesitás servicios de otras personas? </h3>
+          <h3>¿Tenés miedo que la Argentina colapse y no puedas comprar el pan de cada dia? </h3>
+          
+        <h2>  PRONTO - se viene el Club del Truque </h2> 
+     
+    </div>
+</header>
+
+<script>
+window.onload = function() {
+    // Get the width of the title text
+    var textWidth = document.getElementById('title-text').offsetWidth;
+
+    // Set the width of the logo to match the text width
+    document.getElementById('logo').style.width = textWidth + 'px';
+};
+
+
+
+</script>
+
+
+
+
+    <section class="hero-section">
+        <div class="container">
+           
+            <img src="imagenes/Turque.png" alt="Imagen Hero" />
+        </div>
+    </section>
+
+<section class="feature-section">
+    <div class="container">
+        <h2>Trueques complejos se hacen fáciles</h2>
+        <div class="feature">
+            <h3>1. Foto y Precio Mínimo</h3>
+            <img src="imagenes/uno.webp" alt="Función 1" />
+            
+        </div>
+        <div class="feature">
+            <h3>2. Máximo a gastar</h3>
+            <img src="imagenes/dos.webp" alt="Función 2" />
+            
+        </div>
+        <div class="feature">
+            <h3>3. Ofertas</h3>
+            <img src="imagenes/tres.webp" alt="Función 3" />
+
+        </div>
+        <div class="feature">
+            <h3>4. Resolución automática</h3>
+            <img src="imagenes/cuatro.webp" alt="Función 4" />
+ 
+        </div>
+        
+            <p><h2><b>Al final vos decidis si aceptas trueque propuesto o no.</b></h2><p>
+    </div>
+</section>
+
+    <section class="cta-section">
+        <div class="container">
+     
+        
+        
+      <div id="mc_embed_shell" style="text-align:center;">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+        #mc_embed_signup{
+            background: #000; /* changing the background color to black */
+            margin: 0 auto; /* centering the form */
+            clear:left; 
+            font:14px Helvetica,Arial,sans-serif; 
+            width: 600px;
+        }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+    <form action="https://club.us11.list-manage.com/subscribe/post?u=1de15de3ea994992d06d985ad&amp;id=409fc79e24&amp;f_id=00cbb1e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll"><h2>Mantenete al tanto</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> requerido</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Dirección de Email <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+        <input type="text" name="b_1de15de3ea994992d06d985ad_409fc79e24" tabindex="-1" value="">
+    </div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" name="suscribite" id="mc-embedded-subscribe" class="button" value="Suscribite">
+                <p style="margin: 0px auto;"><a href="http://eepurl.com/iCgpHI" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+    (function($) {
+        window.fnames = new Array(); window.ftypes = new Array();
+        fnames[0]='EMAIL';ftypes[0]='email';
+        fnames[1]='FNAME';ftypes[1]='text';
+        fnames[2]='LNAME';ftypes[2]='text';
+        fnames[3]='ADDRESS';ftypes[3]='address';
+        fnames[4]='PHONE';ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';ftypes[5]='birthday';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+</script>
+</div>
+
+
+        </div>
+    </section>
+
+</body>
+</html>
