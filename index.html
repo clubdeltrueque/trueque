@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="es-AR">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Club del Trueque App</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -11,40 +10,45 @@
             color: white;
         }
         
-       h1 {
-    font-size: 3em;
-    margin-bottom: 0.1em;
-    text-transform: uppercase; /* Makes text uppercase */
-    font-weight: 700; /* Makes the font weight bolder */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
-    color: white; /* Keeps the text color white */
-}
-
-
-     
-       
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.1em;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        
+        h2, h3 {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            text-align: center; /* Centra los elementos inline-block */
+            text-align: center;
         }
-        .hero-section,
-        .feature-section,
-        .cta-section {
+        
+        .hero-section, .feature-section, .cta-section {
             padding: 50px 0;
             text-align: center;
         }
+        
         .feature {
             display: inline-block;
-            width: calc(100% / 3 - 20px); /* Ancho dividido entre 3 y margen */
+            width: calc(100% / 3 - 20px);
             margin: 10px;
-            vertical-align: top; /* Alinea los elementos verticalmente */
+            vertical-align: top;
         }
+        
         .feature img {
-            max-width: 100%; /* Asegura que las imágenes no sean más grandes que su contenedor */
-            height: auto; /* Mantiene la relación de aspecto */
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
         .cta-button {
             background-color: #007bff;
             color: white;
@@ -53,82 +57,90 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
+        
         .cta-button:hover {
             background-color: #0056b3;
         }
+        
         body {
-            background-color: black;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6D5BBA 0%, #8D58BF 50%, #9C5AC1 100%);
+            padding: 40px 0;
+        }
+        
+        .hero-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-  
-  
- 
-
-  <header>
-    <div class="container">
-         <h1><span id="title-text">Club del Trueque</span></h1>
-       <h2>Comprá cosas casi sin plata, pagando con otras cosas que no necesitás.</h2>          
-     
-          
-        <h2>  PRONTO - con la App Club del Truque </h2> 
-     
-    </div>
-</header>
-
-<script>
-window.onload = function() {
-    // Get the width of the title text
-    var textWidth = document.getElementById('title-text').offsetWidth;
-
-    // Set the width of the logo to match the text width
-    document.getElementById('logo').style.width = textWidth + 'px';
-};
-
-
-
-</script>
-
-
-
-
+    <header>
+        <div class="container">
+            <h1><span id="title-text">Club del Trueque</span></h1>
+            <h2>Comprá cosas casi sin plata, pagando con otras cosas que no necesitás.</h2>
+            <h2>PRONTO - con la App Club del Trueque</h2>
+        </div>
+    </header>
+    
     <section class="hero-section">
         <div class="container">
-           
             <img src="Turque.png" alt="Imagen Hero" />
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A2SkTj5AlZc?si=WbAPWOl2fenHXtFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
-
-<section class="feature-section">
-    <div class="container">
-        <h2>Trueques complejos se hacen fáciles</h2>
-        <div class="feature">
-            <h3>1. Foto y Precio Mínimo</h3>
-            <img src="uno.webp" alt="Función 1" />
-            
+    
+    <section class="feature-section">
+        <div class="container">
+            <h2>Trueques complejos se hacen fáciles</h2>
+            <div class="feature">
+                <h3>1. Foto y Precio Mínimo</h3>
+                <img src="uno.webp" alt="Función 1" />
+            </div>
+            <div class="feature">
+                <h3>2. Máximo a gastar</h3>
+                <img src="dos.webp" alt="Función 2" />
+            </div>
+            <div class="feature">
+                <h3>3. Ofertas</h3>
+                <img src="tres.webp" alt="Función 3" />
+            </div>
+            <div class="feature">
+                <h3>4. Resolución automática</h3>
+                <img src="cuatro.webp" alt="Función 4" />
+            </div>
+            <p><h2><b>PRONTO - en la plaza de tu barrio</b></h2></p>
         </div>
-        <div class="feature">
-            <h3>2. Máximo a gastar</h3>
-            <img src="dos.webp" alt="Función 2" />
-            
-        </div>
-        <div class="feature">
-            <h3>3. Ofertas</h3>
-            <img src="tres.webp" alt="Función 3" />
-
-        </div>
-        <div class="feature">
-            <h3>4. Resolución automática</h3>
-            <img src="cuatro.webp" alt="Función 4" />
- 
-        </div>
-        
-            <p><h2><b>PRONTO - en la plaza de tu barrio</b></h2><p>
-    </div>
-</section>
-
-
-
+    </section>
 </body>
 </html>
