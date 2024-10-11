@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club del Trueque</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        #text {
+            font-size: 2em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            width: 0;
+            animation: typing 3s steps(20, end) forwards;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 16ch; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+        .flags {
+            display: flex;
+            margin-top: 20px;
+        }
+        .flag-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            opacity: 0;
+        }
+        img {
+            width: 60px;
+            height: auto;
+        }
+        .text {
+            font-size: 1.5em;
+            margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            width: 0;
+            display: inline-block;
+        }
+        @keyframes typingText {
+            from { width: 0; }
+            to { width: 6ch; }
+        }
+        @keyframes blinkText {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <div class="flags" id="flags">
+        <div class="flag-container" id="arg-flag">
+            <img src="https://flagcdn.com/w320/ar.png" alt="Argentinian Flag">
+            <div class="text" id="arg-text"></div>
+        </div>
+    </div>
+    <script>
+        function startAnimation() {
+            const textElement = document.getElementById('text');
+            const argFlagElement = document.getElementById('arg-flag');
+            const argTextElement = document.getElementById('arg-text');
+
+            // Reset states to start fresh each loop
+            document.body.style.backgroundColor = 'black';
+            textElement.innerHTML = '';
+            textElement.style.width = '0';
+            textElement.style.animation = 'none';
+            argFlagElement.style.opacity = 0;
+            argTextElement.innerHTML = '';
+            argTextElement.style.width = '0';
+            argTextElement.style.animation = 'none';
+
+            setTimeout(() => {
+                // Step 1: Type club.del.trueque
+                textElement.style.animation = 'typing 3s steps(20, end) forwards';
+                textElement.innerHTML = 'club.del.trueque';
+
+                setTimeout(() => {
+                    // Step 2: Show Argentina flag
+                    argFlagElement.style.transition = 'opacity 1s ease-in';
+                    argFlagElement.style.opacity = 1;
+
+                    setTimeout(() => {
+                        // Step 3: Type "pronto"
+                        argTextElement.style.animation = 'typingText 1s steps(6, end) forwards';
+                        argTextElement.innerHTML = 'pronto';
+
+                        setTimeout(() => {
+                            // Step 4: Wait 4 seconds, then restart
+                            setTimeout(() => {
+                                startAnimation();
+                            }, 4000);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 500);
+        }
+
+        window.onload = startAnimation;
+    </script>
+</body>
+</html>
