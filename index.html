@@ -24,6 +24,8 @@
             border-right: 2px solid white;
             width: 0;
             animation: typing 3s steps(20, end) forwards;
+            position: relative;
+            z-index: 2;
         }
         @keyframes typing {
             from { width: 0; }
@@ -36,6 +38,8 @@
         .flags {
             display: flex;
             margin-top: 20px;
+            position: relative;
+            z-index: 2;
         }
         .flag-container {
             display: flex;
@@ -69,9 +73,18 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        #background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
+    <div id="background-container"></div>
     <div id="text"></div>
     <div class="flags" id="flags">
         <div class="flag-container" id="arg-flag">
@@ -121,7 +134,44 @@
             }, 500);
         }
 
-        window.onload = startAnimation;
+        function createBackgroundSVG() {
+            const container = document.getElementById('background-container');
+            const svgNS = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNS, "svg");
+            svg.setAttribute("width", "100%");
+            svg.setAttribute("height", "100%");
+
+            const emojis = ["📱", "👕", "📚", "🛠️", "🎸", "🖼️", "🚲", "💻"];
+            const numEmojis = 20;
+
+            for (let i = 0; i < numEmojis; i++) {
+                const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+                const text = document.createElementNS(svgNS, "text");
+                text.textContent = emoji;
+                text.setAttribute("x", Math.random() * 100 + "%");
+                text.setAttribute("y", Math.random() * 100 + "%");
+                text.setAttribute("fill", "white");
+                text.setAttribute("font-size", "24");
+                text.style.animation = `move ${10 + Math.random() * 10}s linear infinite`;
+                svg.appendChild(text);
+            }
+
+            container.appendChild(svg);
+
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes move {
+                    0% { transform: translate(0, 0) rotate(0deg); }
+                    100% { transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        window.onload = () => {
+            startAnimation();
+            createBackgroundSVG();
+        };
     </script>
 </body>
 </html>
