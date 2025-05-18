@@ -1,0 +1,66 @@
+<section id="sms-consent" style="margin-top: 2em;">
+  <div style="text-align: right; margin-bottom: 1em;">
+    <button onclick="toggleLanguage('en')" style="margin-right: 5px;">English</button>
+    <button onclick="toggleLanguage('es')">Español</button>
+  </div>
+
+  <!-- English version -->
+  <div id="sms-consent-en">
+    <h2>Phone Number Verification and SMS Messaging Consent</h2>
+    <p>
+      By providing your phone number to <strong>Trueque.Club</strong>, a service operated by 
+      <strong>Curator Collective LLC</strong>, you consent to receive SMS messages from us for the following purposes:
+    </p>
+    <ul>
+      <li>Verifying your identity and account.</li>
+      <li>Sending updates related to your account or transactions.</li>
+      <li>Notifying you of important changes to our services.</li>
+    </ul>
+    <p>
+      These messages may include one-time passcodes (OTP), transaction confirmations, or service alerts. 
+      We will <strong>not send marketing messages</strong> to your phone number unless you explicitly opt in to receive them.
+    </p>
+    <p>
+      Message and data rates may apply depending on your mobile carrier. You can opt out of receiving messages 
+      at any time by replying <strong>STOP</strong>.
+    </p>
+    <p>
+      Your phone number and any personal information you provide are handled in accordance with our 
+      <a href="https://curatorbtc.com/privacy" target="_blank">Privacy Policy</a> and will never be shared 
+      with third parties for marketing purposes.
+    </p>
+  </div>
+
+  <!-- Spanish version -->
+  <div id="sms-consent-es" style="display: none;">
+    <h2>Verificación de Número Telefónico y Consentimiento para Mensajes SMS</h2>
+    <p>
+      Al proporcionar tu número de teléfono a <strong>Trueque.Club</strong>, un servicio operado por 
+      <strong>Curator Collective LLC</strong>, consientes en recibir mensajes SMS de nuestra parte con los siguientes fines:
+    </p>
+    <ul>
+      <li>Verificar tu identidad y cuenta.</li>
+      <li>Enviar actualizaciones relacionadas con tu cuenta o transacciones.</li>
+      <li>Notificarte sobre cambios importantes en nuestros servicios.</li>
+    </ul>
+    <p>
+      Estos mensajes pueden incluir códigos de verificación (OTP), confirmaciones de transacciones o alertas de servicio.
+      <strong>No enviaremos mensajes de marketing</strong> a tu número salvo que lo autorices explícitamente.
+    </p>
+    <p>
+      Las tarifas de mensajes y datos pueden variar según tu proveedor móvil. Puedes darte de baja en cualquier momento 
+      respondiendo con la palabra <strong>STOP</strong>.
+    </p>
+    <p>
+      Tu número telefónico y cualquier otra información personal que nos proporciones se manejarán de acuerdo con nuestra 
+      <a href="https://curatorbtc.com/privacy" target="_blank">Política de Privacidad</a> y nunca serán compartidos con terceros con fines de marketing.
+    </p>
+  </div>
+</section>
+
+<script>
+  function toggleLanguage(lang) {
+    document.getElementById("sms-consent-en").style.display = lang === "en" ? "block" : "none";
+    document.getElementById("sms-consent-es").style.display = lang === "es" ? "block" : "none";
+  }
+</script>
